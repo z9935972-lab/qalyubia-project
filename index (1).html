@@ -1,0 +1,640 @@
+```html
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>القليوبية المستدامة | نحو محافظة خضراء ومتقدمة</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts (Cairo) -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        cairo: ['Cairo', 'sans-serif'],
+                    },
+                    colors: {
+                        eco: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                        },
+                        tealCustom: {
+                            500: '#0d9488',
+                            700: '#0f766e',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(229, 231, 235, 0.8);
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #064e3b 0%, #047857 50%, #0d9488 100%);
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #16a34a;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased flex flex-col min-h-screen">
+
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center space-x-3 space-x-reverse">
+                    <div class="w-12 h-12 bg-eco-600 rounded-xl flex items-center justify-center text-white shadow-lg shadow-eco-600/30">
+                        <i class="fa-solid font-bold text-2xl fa-leaf"></i>
+                    </div>
+                    <div>
+                        <span class="text-2xl font-black text-slate-900 tracking-tight block leading-none">القليوبية المستدامة</span>
+                        <span class="text-xs text-eco-700 font-semibold">مبادرة البيئة والتطوير الصناعي</span>
+                    </div>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-6 space-x-reverse font-bold text-slate-700">
+                    <a href="#comparison" class="hover:text-eco-600 transition-colors">السلبيات والإيجابيات</a>
+                    <a href="#vision" class="hover:text-eco-600 transition-colors">الرؤية والأهداف</a>
+                    <a href="#simulator" class="hover:text-eco-600 transition-colors">حاسبة التدوير</a>
+                    <a href="#roadmap" class="hover:text-eco-600 transition-colors">خطة العمل</a>
+                    <a href="#report" class="hover:text-eco-600 transition-colors">شارك بفكرة</a>
+                </div>
+
+                <div class="flex items-center space-x-2 space-x-reverse">
+                    <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-eco-100 text-eco-800 border border-eco-200">
+                        <span class="w-2 h-2 rounded-full bg-eco-500 animate-pulse ml-2"></span>
+                        مشروع مدرسي مبتكر
+                    </span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <header class="gradient-bg text-white relative overflow-hidden py-16 lg:py-24">
+        <!-- Background Shapes -->
+        <div class="absolute -right-10 -top-10 w-80 h-80 bg-white/5 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -left-10 -bottom-10 w-96 h-96 bg-teal-400/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-right">
+                    <div class="inline-flex items-center px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md text-emerald-200 text-sm font-semibold border border-white/20">
+                        <i class="fa-solid fa-sparkles ml-2 text-yellow-300"></i> خريطة طريق للقليوبية خالية من التلوث
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight">
+                        تحويل القليوبية إلى محافظة <span class="text-emerald-300 underline decoration-wavy underline-offset-8">نظيفة ومتقدمة</span>
+                    </h1>
+                    <p class="text-lg sm:text-xl text-emerald-100 font-light leading-relaxed max-w-2xl">
+                        رؤية متكاملة للتخلص من التلوث والمخلفات الصناعية (في شبرا الخيمة، العكرشة، والخانكة) واستبدالها بالتكنولوجيا الخضراء والطاقة النظيفة لبيئة صحية ومستقبل أفضل.
+                    </p>
+                    <div class="pt-4 flex flex-wrap gap-4 justify-center lg:justify-start">
+                        <a href="#simulator" class="bg-emerald-400 hover:bg-emerald-300 text-slate-900 font-bold px-8 py-3.5 rounded-xl shadow-lg transition-all transform hover:-translate-y-1">
+                            جرب حاسبة التدوير التفاعلية <i class="fa-solid fa-calculator mr-2"></i>
+                        </a>
+                        <a href="#roadmap" class="bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-3.5 rounded-xl border border-white/30 backdrop-blur-md transition-all">
+                            استكشف المحاور العملية <i class="fa-solid fa-arrow-left mr-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Stats Badge Card -->
+                <div class="lg:col-span-5">
+                    <div class="glass-card rounded-3xl p-6 text-slate-800 shadow-2xl relative">
+                        <h3 class="text-xl font-bold mb-4 border-b pb-3 border-slate-200 text-slate-900 flex items-center">
+                            <i class="fa-solid fa-chart-pie ml-2 text-eco-600"></i> المستهدفات الرئيسية لخطة التطوير
+                        </h3>
+                        <div class="space-y-4">
+                            <div class="bg-emerald-50 p-4 rounded-2xl flex items-center justify-between border border-emerald-100">
+                                <div class="flex items-center space-x-3 space-x-reverse">
+                                    <div class="w-10 h-10 rounded-lg bg-emerald-500 text-white flex items-center justify-center font-bold">
+                                        <i class="fa-solid fa-smog"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs text-slate-500">خفض انبعاثات المصانع</p>
+                                        <p class="font-black text-slate-800">حتى 75% تقليص</p>
+                                    </div>
+                                </div>
+                                <span class="text-emerald-700 font-bold text-sm">هدف 2030</span>
+                            </div>
+
+                            <div class="bg-teal-50 p-4 rounded-2xl flex items-center justify-between border border-teal-100">
+                                <div class="flex items-center space-x-3 space-x-reverse">
+                                    <div class="w-10 h-10 rounded-lg bg-teal-500 text-white flex items-center justify-center font-bold">
+                                        <i class="fa-solid fa-recycle"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs text-slate-500">إعادة تدوير المخلفات</p>
+                                        <p class="font-black text-slate-800">تحويل 80% من النفايات</p>
+                                    </div>
+                                </div>
+                                <span class="text-teal-700 font-bold text-sm">اقتصاد دائر</span>
+                            </div>
+
+                            <div class="bg-cyan-50 p-4 rounded-2xl flex items-center justify-between border border-cyan-100">
+                                <div class="flex items-center space-x-3 space-x-reverse">
+                                    <div class="w-10 h-10 rounded-lg bg-cyan-500 text-white flex items-center justify-center font-bold">
+                                        <i class="fa-solid fa-tree"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs text-slate-500">المساحات الخضراء</p>
+                                        <p class="font-black text-slate-800">+100 ألف شجرة</p>
+                                    </div>
+                                </div>
+                                <span class="text-cyan-700 font-bold text-sm">حزام أخضر</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Body -->
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16">
+
+        <!-- NEW SECTION: Positives vs Negatives with Images -->
+        <section id="comparison" class="scroll-mt-24">
+            <div class="text-center max-w-3xl mx-auto mb-10">
+                <span class="text-eco-600 font-extrabold text-sm tracking-wider uppercase bg-eco-50 px-3 py-1 rounded-full border border-eco-200">الواقع والرؤية المستقبلية</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">تشخيص الوضع: السلبيات والإيجابيات بالقليوبية</h2>
+                <p class="text-slate-600 mt-3 text-base">استعراض لأبرز التحديات التي نعاني منها في شبرا الخيمة والخانكة والعكرشة، مقابل الإنجازات والحلول الخضراء المستهدفة.</p>
+                
+                <!-- Filter Tabs -->
+                <div class="flex justify-center gap-3 mt-6">
+                    <button onclick="filterGallery('all')" id="btn-all" class="filter-btn bg-eco-600 text-white font-bold px-5 py-2 rounded-xl transition-all shadow-md">
+                        الكل <i class="fa-solid fa-layer-group ml-1"></i>
+                    </button>
+                    <button onclick="filterGallery('negative')" id="btn-negative" class="filter-btn bg-slate-200 text-slate-700 font-bold px-5 py-2 rounded-xl hover:bg-rose-100 hover:text-rose-700 transition-all">
+                        السلبيات والتحديات <i class="fa-solid fa-triangle-exclamation ml-1 text-rose-500"></i>
+                    </button>
+                    <button onclick="filterGallery('positive')" id="btn-positive" class="filter-btn bg-slate-200 text-slate-700 font-bold px-5 py-2 rounded-xl hover:bg-emerald-100 hover:text-emerald-700 transition-all">
+                        الإيجابيات والحلول <i class="fa-solid fa-circle-check ml-1 text-emerald-500"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Cards Grid with Images -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="galleryContainer">
+                
+                <!-- Negative Card 1 -->
+                <div class="gallery-item negative bg-white rounded-2xl overflow-hidden border border-rose-200 shadow-sm hover:shadow-lg transition-all">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?auto=format&fit=crop&w=600&q=80" alt="المخلفات والتلوث الصناعي" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <span class="absolute top-3 right-3 bg-rose-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
+                            <i class="fa-solid fa-triangle-exclamation ml-1"></i> سلبيات
+                        </span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-lg text-slate-900 mb-1">المخلفات والصرف الصناعي</h3>
+                        <p class="text-slate-600 text-xs leading-relaxed">
+                            إلقاء مخلفات المصانع والسباك العشوائية في الترع والمصارف كترعة الإسماعيلية مما يؤثر على الصحة والبيئة.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Negative Card 2 -->
+                <div class="gallery-item negative bg-white rounded-2xl overflow-hidden border border-rose-200 shadow-sm hover:shadow-lg transition-all">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1569163139599-0f4517e36f31?auto=format&fit=crop&w=600&q=80" alt="الانبعاثات والدخان" class="w-full h-full object-cover">
+                        <span class="absolute top-3 right-3 bg-rose-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
+                            <i class="fa-solid fa-triangle-exclamation ml-1"></i> سلبيات
+                        </span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-lg text-slate-900 mb-1">انبعاثات المداخن والعوادم</h3>
+                        <p class="text-slate-600 text-xs leading-relaxed">
+                            تلوث الهواء الناتج عن حرق المخلفات ومداخن مصانع الطوب والبلاستيك غير المرخصة في العكرشة والخانكة.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Positive Card 1 -->
+                <div class="gallery-item positive bg-white rounded-2xl overflow-hidden border border-emerald-200 shadow-sm hover:shadow-lg transition-all">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=600&q=80" alt="إعادة التدوير الحديثة" class="w-full h-full object-cover">
+                        <span class="absolute top-3 right-3 bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
+                            <i class="fa-solid fa-circle-check ml-1"></i> إيجابيات وحلول
+                        </span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-lg text-slate-900 mb-1">مصانع تدوير حديثة</h3>
+                        <p class="text-slate-600 text-xs leading-relaxed">
+                            إنشاء مجمعات تدوير خضراء تحول مخلفات البلاستيك والمعادن إلى مواد خام قيمة تخدم الاقتصاد المحلي.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Positive Card 2 -->
+                <div class="gallery-item positive bg-white rounded-2xl overflow-hidden border border-emerald-200 shadow-sm hover:shadow-lg transition-all">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=600&q=80" alt="الأحزمة الخضراء والحدائق" class="w-full h-full object-cover">
+                        <span class="absolute top-3 right-3 bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
+                            <i class="fa-solid fa-circle-check ml-1"></i> إيجابيات وحلول
+                        </span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-lg text-slate-900 mb-1">الأحزمة الخضراء والحدائق</h3>
+                        <p class="text-slate-600 text-xs leading-relaxed">
+                            التوسع في تشجير الطرق ومداخل شبرا الخيمة وبنها لامتصاص الغازات وزيادة نصيب الفرد من المساحة الخضراء.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION 1: Strategic Vision Pillars -->
+        <section id="vision">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-eco-600 font-extrabold text-sm tracking-wider uppercase bg-eco-50 px-3 py-1 rounded-full border border-eco-200">حلول جذرية ومجربة</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">محاور تحويل القليوبية لبيئة نظيفة ومتقدمة</h2>
+                <p class="text-slate-600 mt-3 text-base">خطة مبسطة ترتكز على التكنولوجيا والتنظيم لمنع خطورة المخلفات الصناعية تماماً.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+                    <div class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center text-2xl mb-5 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-industry"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">1. تقنين وعزل المناطق الصناعية</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        نقل السباك والمصانع العشوائية الملوثة من وسط الكتل السكنية إلى مجمعات صناعية مجهزة ومحاطة بأحزمة خضراء لامتصاص الغازات.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+                    <div class="w-14 h-14 bg-teal-100 text-teal-600 rounded-xl flex items-center justify-center text-2xl mb-5 group-hover:bg-teal-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-filter text-teal-600 group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">2. الفلاتر ومحطات المعالجة</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        إلزام كافة المنشآت بتركيب مرشحات دقيقة (فلاتر) للمداخن، ومحطات معالجة الصرف الصناعي لمنع التسرب لمجاري المياه.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+                    <div class="w-14 h-14 bg-cyan-100 text-cyan-600 rounded-xl flex items-center justify-center text-2xl mb-5 group-hover:bg-cyan-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-microchip"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">3. الرصد والمراقبة الرقمية</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        تركيب أجهزة استشعار بيئية ذكية في الهواء والماء لرصد أي تسريب أو انبعاثات مخالفة وتطبيق الغرامات فورياً.
+                    </p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+                    <div class="w-14 h-14 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center text-2xl mb-5 group-hover:bg-amber-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-arrows-spin"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">4. الاقتصاد الدائري وإعادة التدوير</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        تحويل المخلفات الصلبة والبلاستيكية والخشبية إلى مواد خام مجدداً، واستغلال العوادم غير القابلة للتدوير في إنتاج الطاقة.
+                    </p>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+                    <div class="w-14 h-14 bg-lime-100 text-lime-700 rounded-xl flex items-center justify-center text-2xl mb-5 group-hover:bg-lime-700 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-tree"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">5. التخضير والتطوير العمراني</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        توسع كبير في زراعة حدائق ومتنزهات في شبرا الخيمة وقليوب والخانكة لتنقية جو المحافظة وتحسين جودة الحياة.
+                    </p>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+                    <div class="w-14 h-14 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center text-2xl mb-5 group-hover:bg-purple-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">6. التوعية والمشاركة المجتمعية</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        تفعيل دور المدارس والشباب والجمعيات الأهلية في نشر الوعي البيئي والتبليغ عن المخالفات البيئية العشوائية.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: Interactive Recycling Impact Simulator -->
+        <section id="simulator" class="bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-6 sm:p-10 text-white shadow-xl relative overflow-hidden">
+            <div class="max-w-3xl">
+                <span class="text-emerald-400 text-xs font-bold uppercase tracking-widest bg-emerald-950/80 px-3 py-1 rounded-full border border-emerald-800">أداة محاكاة تفاعلية</span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold mt-3">محاكي أثر إعادة التدوير والمعالجة</h2>
+                <p class="text-slate-300 text-sm sm:text-base mt-2">
+                    حرّك شريط نسبة التدوير الصناعي للتعرف على النتائج الإيجابية المتوقعة على محافظة القليوبية.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mt-8 items-center">
+                <!-- Slider Side -->
+                <div class="lg:col-span-6 bg-slate-800/80 p-6 rounded-2xl border border-slate-700">
+                    <label for="recycleSlider" class="block text-sm font-bold text-emerald-300 mb-2">
+                        نسبة إعادة تدوير المخلفات الصناعية المفترضة:
+                    </label>
+                    <div class="flex items-center space-x-4 space-x-reverse mb-4">
+                        <input id="recycleSlider" type="range" min="10" max="95" value="45" class="w-full h-3 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-emerald-500">
+                        <span id="sliderValue" class="text-2xl font-black text-emerald-400 w-16 text-center">45%</span>
+                    </div>
+                    <p class="text-xs text-slate-400">
+                        * النسبة الحالية التقديرية قبل التطوير تتراوح بين 15% إلى 20%. رفع النسبة يعكس مدى تقدم المنظومة.
+                    </p>
+                </div>
+
+                <!-- Visual Output Side -->
+                <div class="lg:col-span-6 grid grid-cols-2 gap-4">
+                    <div class="bg-slate-800/90 border border-slate-700 p-5 rounded-2xl text-center">
+                        <i class="fa-solid fa-cloud-arrow-down text-3xl text-emerald-400 mb-2"></i>
+                        <p class="text-xs text-slate-400">انخفاض انبعاثات الكربون</p>
+                        <p id="co2Reduction" class="text-2xl sm:text-3xl font-black text-emerald-300 mt-1">36%</p>
+                    </div>
+
+                    <div class="bg-slate-800/90 border border-slate-700 p-5 rounded-2xl text-center">
+                        <i class="fa-solid fa-droplet-slash text-3xl text-cyan-400 mb-2"></i>
+                        <p class="text-xs text-slate-400">حماية مياه المصارف والترع</p>
+                        <p id="waterProtection" class="text-2xl sm:text-3xl font-black text-cyan-300 mt-1">45%</p>
+                    </div>
+
+                    <div class="bg-slate-800/90 border border-slate-700 p-5 rounded-2xl text-center">
+                        <i class="fa-solid fa-briefcase text-3xl text-amber-400 mb-2"></i>
+                        <p class="text-xs text-slate-400">فرص عمل خضراء جديدة</p>
+                        <p id="jobsCreated" class="text-2xl sm:text-3xl font-black text-amber-300 mt-1">+6,750</p>
+                    </div>
+
+                    <div class="bg-slate-800/90 border border-slate-700 p-5 rounded-2xl text-center">
+                        <i class="fa-solid fa-heart-pulse text-3xl text-rose-400 mb-2"></i>
+                        <p class="text-xs text-slate-400">تحسن جودة صحة المواطنين</p>
+                        <p id="healthIndex" class="text-2xl sm:text-3xl font-black text-rose-300 mt-1">ممتاز</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: Roadmap Checklist -->
+        <section id="roadmap" class="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-sm">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4 border-b pb-6 border-slate-100">
+                <div>
+                    <span class="text-eco-600 font-extrabold text-xs tracking-wider uppercase bg-eco-50 px-3 py-1 rounded-full border border-eco-200">الخطوات الإجرائية</span>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">خطة العمل والخطوات المباشرة</h2>
+                </div>
+                <div class="bg-emerald-50 px-4 py-2 rounded-xl border border-emerald-200 text-sm font-semibold text-emerald-800 flex items-center">
+                    <span>نسبة المتابعة والتنفيذ: </span>
+                    <span id="progressText" class="font-black mr-2 text-eco-700">0%</span>
+                </div>
+            </div>
+
+            <!-- Checklist -->
+            <div class="space-y-4" id="checklistContainer">
+                <label class="flex items-start p-4 rounded-xl border border-slate-200 hover:bg-slate-50 transition-colors cursor-pointer select-none">
+                    <input type="checkbox" class="checklist-item mt-1 w-5 h-5 text-eco-600 rounded focus:ring-eco-500 accent-eco-600">
+                    <span class="mr-3 text-slate-800 font-medium">إغلاق وتطوير المصانع غير المرخصة في العكرشة وشبرا الخيمة.</span>
+                </label>
+
+                <label class="flex items-start p-4 rounded-xl border border-slate-200 hover:bg-slate-50 transition-colors cursor-pointer select-none">
+                    <input type="checkbox" class="checklist-item mt-1 w-5 h-5 text-eco-600 rounded focus:ring-eco-500 accent-eco-600">
+                    <span class="mr-3 text-slate-800 font-medium">تركيب أجهزة الرصد اللحظي لجودة الهواء بمحيط المناطق الصناعية.</span>
+                </label>
+
+                <label class="flex items-start p-4 rounded-xl border border-slate-200 hover:bg-slate-50 transition-colors cursor-pointer select-none">
+                    <input type="checkbox" class="checklist-item mt-1 w-5 h-5 text-eco-600 rounded focus:ring-eco-500 accent-eco-600">
+                    <span class="mr-3 text-slate-800 font-medium">إنشاء محطة معالجة الصرف الصناعي المركزية بالخانكة.</span>
+                </label>
+
+                <label class="flex items-start p-4 rounded-xl border border-slate-200 hover:bg-slate-50 transition-colors cursor-pointer select-none">
+                    <input type="checkbox" class="checklist-item mt-1 w-5 h-5 text-eco-600 rounded focus:ring-eco-500 accent-eco-600">
+                    <span class="mr-3 text-slate-800 font-medium">تطبيق منظومة تتبع نقل النفايات الخطرة لمنع إلقائها بالترع والطرق.</span>
+                </label>
+
+                <label class="flex items-start p-4 rounded-xl border border-slate-200 hover:bg-slate-50 transition-colors cursor-pointer select-none">
+                    <input type="checkbox" class="checklist-item mt-1 w-5 h-5 text-eco-600 rounded focus:ring-eco-500 accent-eco-600">
+                    <span class="mr-3 text-slate-800 font-medium">تشجير المداخل الرئيسية للمحافظة وإنشاء الأحزمة الخضراء الحامية.</span>
+                </label>
+            </div>
+        </section>
+
+        <!-- SECTION 4: Citizen Participation & Idea Form -->
+        <section id="report" class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            <div class="lg:col-span-5 space-y-4">
+                <span class="text-eco-600 font-extrabold text-xs tracking-wider uppercase bg-eco-50 px-3 py-1 rounded-full border border-eco-200">صوت المواطن والطالب</span>
+                <h2 class="text-3xl font-extrabold text-slate-900">شارك بفكرتك أو أبلغ عن مخترقات بيئية</h2>
+                <p class="text-slate-600 leading-relaxed text-sm">
+                    المشاركة المجتمعية هي أساس نجاح أي منظومة بيئية. يسعدنا استقبال مقترحات الطلاب والمواطنين للتطوير في مناطق شبرا الخيمة، بهتيم، الخانكة، وقليوب.
+                </p>
+                <div class="bg-amber-50 p-4 rounded-2xl border border-amber-200 text-amber-900 text-sm flex items-start">
+                    <i class="fa-solid fa-lightbulb text-amber-500 text-xl ml-3 mt-0.5"></i>
+                    <div>
+                        <strong class="block mb-1">أفكار مقترحة للمشاريع:</strong>
+                        مبادرات المدارس الخضراء، زراعة أسطح المباني العامة، وتجميع المخلفات الإلكترونية.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Form -->
+            <div class="lg:col-span-7 bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm">
+                <form id="ideaForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-1">الاسم الكريم / الطالب</label>
+                        <input type="text" required placeholder="أدخل اسمك هنا" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-eco-500 focus:outline-none">
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-1">المنطقة / الحي</label>
+                            <select class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-eco-500 focus:outline-none">
+                                <option>بهتيم / شبرا الخيمة</option>
+                                <option>الخانكة</option>
+                                <option>العكرشة</option>
+                                <option>بنها</option>
+                                <option>قليوب</option>
+                                <option>منطقة أخرى بالقليوبية</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-1">نوع المشاركة</label>
+                            <select class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-eco-500 focus:outline-none">
+                                <option>فكرة مبتكرة لتطوير المنطقة</option>
+                                <option>بلاغ عن مخلفات صناعية</option>
+                                <option>مقترح مشروع مدرسي بيئي</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-1">تفاصيل الفكرة أو المقترح</label>
+                        <textarea rows="4" required placeholder="اكتب تفاصيل فكرتك وكيفية تطبيقها..." class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-eco-500 focus:outline-none"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full bg-eco-600 hover:bg-eco-700 text-white font-bold py-3.5 rounded-xl shadow-lg shadow-eco-600/20 transition-colors">
+                        إرسال المشاركة <i class="fa-solid fa-paper-plane mr-2"></i>
+                    </button>
+                </form>
+
+                <!-- Success Alert Box -->
+                <div id="alertBox" class="hidden mt-4 p-4 bg-emerald-100 border border-emerald-300 text-emerald-800 rounded-xl text-center font-bold">
+                    <i class="fa-solid fa-circle-check text-xl ml-2"></i> تم إرسال مشاركتك بنجاح! شكراً لمساهمتك في مستقبل القليوبية.
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PROMINENT FOOTER (As Requested) -->
+    <footer class="bg-slate-900 text-white mt-auto border-t-4 border-eco-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6 border-b border-slate-800 pb-8">
+                
+                <div class="flex items-center space-x-3 space-x-reverse text-center md:text-right">
+                    <div class="w-12 h-12 bg-eco-600 rounded-2xl flex items-center justify-center text-white text-2xl font-black">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-black">مبادرة القليوبية المستدامة</h4>
+                        <p class="text-slate-400 text-xs mt-0.5">رؤية شبابية نحو بيئة بيئية وصناعية متطورة</p>
+                    </div>
+                </div>
+
+                <!-- Prominent Student Credit Banner -->
+                <div class="bg-gradient-to-r from-emerald-950 to-slate-800 border border-emerald-500/40 rounded-2xl p-4 text-center md:text-right shadow-lg">
+                    <span class="text-xs text-emerald-400 font-bold block mb-1">
+                        <i class="fa-solid fa-graduation-cap ml-1"></i> إعداد وتصميم المبادرة:
+                    </span>
+                    <p class="text-xl font-extrabold text-white">
+                        برعاية الطالب: <span class="text-emerald-300 underline underline-offset-4">محمد أحمد محمد</span>
+                    </p>
+                    <p class="text-sm font-semibold text-slate-300 mt-1">
+                        <i class="fa-solid fa-school ml-1 text-emerald-400"></i> مدرسة بهتيم الثانوية بنين
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="pt-6 text-center text-xs text-slate-500 flex flex-col sm:flex-row justify-between items-center gap-2">
+                <p>© 2026 جميع الحقوق محفوظة - مشروع التوعية البيئية والتطوير الصناعي بمحافظة القليوبية.</p>
+                <p class="text-slate-400">محافظة القليوبية | شبرا الخيمة - بهتيم</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive JavaScript Logic -->
+    <script>
+        // Gallery Filter Logic
+        function filterGallery(category) {
+            const items = document.querySelectorAll('.gallery-item');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            buttons.forEach(btn => {
+                btn.className = "filter-btn bg-slate-200 text-slate-700 font-bold px-5 py-2 rounded-xl hover:bg-slate-300 transition-all";
+            });
+
+            if (category === 'all') {
+                document.getElementById('btn-all').className = "filter-btn bg-eco-600 text-white font-bold px-5 py-2 rounded-xl transition-all shadow-md";
+            } else if (category === 'negative') {
+                document.getElementById('btn-negative').className = "filter-btn bg-rose-600 text-white font-bold px-5 py-2 rounded-xl transition-all shadow-md";
+            } else if (category === 'positive') {
+                document.getElementById('btn-positive').className = "filter-btn bg-emerald-600 text-white font-bold px-5 py-2 rounded-xl transition-all shadow-md";
+            }
+
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // 1. Simulator Logic
+        const slider = document.getElementById('recycleSlider');
+        const sliderVal = document.getElementById('sliderValue');
+        const co2Text = document.getElementById('co2Reduction');
+        const waterText = document.getElementById('waterProtection');
+        const jobsText = document.getElementById('jobsCreated');
+        const healthText = document.getElementById('healthIndex');
+
+        slider.addEventListener('input', function() {
+            const val = parseInt(this.value);
+            sliderVal.innerText = val + '%';
+            
+            // Mathematical approximations based on recycling input
+            const co2 = Math.round(val * 0.8);
+            const water = Math.round(val * 1.0);
+            const jobs = Math.round(val * 150);
+
+            co2Text.innerText = co2 + '%';
+            waterText.innerText = water + '%';
+            jobsText.innerText = '+' + jobs.toLocaleString();
+
+            if (val < 30) {
+                healthText.innerText = 'ضعيف';
+                healthText.className = 'text-2xl sm:text-3xl font-black text-rose-400 mt-1';
+            } else if (val < 60) {
+                healthText.innerText = 'متوسط';
+                healthText.className = 'text-2xl sm:text-3xl font-black text-amber-300 mt-1';
+            } else {
+                healthText.innerText = 'ممتاز';
+                healthText.className = 'text-2xl sm:text-3xl font-black text-emerald-300 mt-1';
+            }
+        });
+
+        // 2. Checklist Progress Tracker Logic
+        const checkboxes = document.querySelectorAll('.checklist-item');
+        const progressText = document.getElementById('progressText');
+
+        checkboxes.forEach(cb => {
+            cb.addEventListener('change', updateProgress);
+        });
+
+        function updateProgress() {
+            const total = checkboxes.length;
+            const checked = document.querySelectorAll('.checklist-item:checked').length;
+            const percentage = Math.round((checked / total) * 100);
+            progressText.innerText = percentage + '%';
+        }
+
+        // 3. Form Submission Handling (Without Alert)
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const alertBox = document.getElementById('alertBox');
+            alertBox.classList.remove('hidden');
+            document.getElementById('ideaForm').reset();
+            
+            setTimeout(() => {
+                alertBox.classList.add('hidden');
+            }, 5000);
+        }
+    </script>
+</body>
+</html>
+```
